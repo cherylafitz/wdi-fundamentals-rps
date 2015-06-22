@@ -52,10 +52,6 @@ function getWinner(playerMove,computerMove) {
     return winner;
 }
 
-// var playerMove = getPlayerMove();
-// var computerMove = getComputerMove();
-// getWinner(playerMove, computerMove);
-
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
@@ -78,7 +74,13 @@ function playToFive() {
             }
         console.log('The score is currently ' + playerWins + ' to ' + computerWins + '.\n');
     }
+    if (playerWins > computerWins) {
+        console.log('Game over. The player wins!')
+    }
+    else {
+        console.log('Game over. The computer wins!')
+    }
+    console.log('The final score is ' + playerWins + ' to ' + computerWins +'.');
     return [playerWins, computerWins];
 }
 
-playToFive();
